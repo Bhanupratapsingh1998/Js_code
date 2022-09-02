@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy Text</title>
+    <script>
+        function copyText() {
+            var txt1 = document.getElementById('copy1').value;
+            document.getElementById('copy2').value = txt1;
+        }
+    </script>
+</head>
+<body>
+    <h1>Copy Same text to another field</h1>
+    <input type="text" id="copy1" name="copy1" onkeyup="copyText()" placeholder="Enter name" />
+   <input type="text" id="copy2"/>
+</body>
+</html>

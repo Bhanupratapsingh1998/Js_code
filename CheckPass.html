@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Password</title>
+    <script>
+        function checkPass() {
+            var x = document.getElementById('pwd').value;
+            var len = x.length;
+          if(len>8){
+              document.getElementById('msg').innerHTML = "Strong Password";
+          }else if(len>5){
+            document.getElementById('msg').innerHTML = "Medium Password";
+            
+          }else{
+            document.getElementById('msg').innerHTML = "Weak Password";
+          }
+
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Please enter your strong password</h1>
+    <input type="password" id="pwd" name="pwd" placeholder="Enter your password" onkeyup="checkPass()" />
+    <span id="msg"></span>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <script>
+        function checkValidation() {
+            var name_pattern = /^[a-zA-z ]{3,30}$/;
+            var user_name = document.form1.name.value;
+
+            var ph_pattern = /^[0-9]{10}$/;
+            var ph_name = document.form1.ph_no.value;
+
+            if(!name_pattern.test(user_name)){
+                alert("Invalid name");
+                return false;
+            }else if(!ph_pattern.test(ph_name)){
+                alert("Invalid Phone number");
+                return false;
+            }
+            else{
+                alert("Valid");
+            }
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="checkValidation()" name="form1">
+        <input type="text" placeholder="Enter the name" id="name" name="name">
+        <input type="text" placeholder="Enter the name" id="ph_no" name="ph_no">
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>

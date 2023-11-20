@@ -1,0 +1,23 @@
+Example for git rebase:
+Create a new branch and make changes:
+
+bash
+Copy code
+git checkout -b feature_branch
+echo "Some changes" > myfile.txt
+git add myfile.txt
+git commit -m "Add changes on feature_branch"
+Switch to the main branch and make changes:
+
+bash
+Copy code
+git checkout main
+echo "Some changes on main" > mainfile.txt
+git add mainfile.txt
+git commit -m "Add changes on main"
+Rebase feature_branch onto main:
+
+bash
+Copy code
+git checkout feature_branch
+git rebase main

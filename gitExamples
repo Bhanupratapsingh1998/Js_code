@@ -1,0 +1,79 @@
+==================================================Spring Boot========================================
+@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+@JsonIgnoreProperties(
+   value = {"vehicle"},
+   allowSetters = true
+)
+  @Enumerated(EnumType.STRING)
+  @EntityScan
+  
+  
+@EqualsAndHashCode(
+    callSuper = false,
+    exclude = {"vehicleCoaches", "vehicleType"})
+    
+    
+=========================================About Git=========================================================
+Certainly, here are some common Git commands and examples for various Git operations:
+View Commit History:
+git log
+
+Create a New Branch:
+git branch <branch_name>
+
+Switch to a Branch:
+git checkout <branch_name>
+
+Create and Switch to a New Branch:
+git checkout -b <new_branch_name>
+
+Merge Branches:
+ 1.Create a new branch and make changes:
+    git checkout -b feature_branch
+    echo "Some changes" > myfile.txt
+    git add myfile.txt
+    git commit -m "Add changes on feature_branch"
+    
+ 2.Switch to the main branch and make changes:
+    git checkout main
+    echo "Some changes on main" > mainfile.txt
+    git add mainfile.txt
+    git commit -m "Add changes on main"
+ 3.Merge feature_branch into main:
+   git checkout main
+   git merge feature_branch
+   
+Rebase Branches:
+ 3.Rebase feature_branch onto main:
+   git checkout feature_branch
+   git rebase main
+   
+Discard Changes in Working Directory:
+ git reset --hard
+
+Undo the Last Commit:
+git reset HEAD~1
+
+Create a Tag:
+git tag <tag_name>
+
+List Tags:
+git tag
+
+Delete a Branch:
+git branch -d <branch_name>
+
+Revert and restore a Commit:
+A -- B -- C -- D (HEAD)
+git revert <commit_hash> C  
+A -- B -- C -- D -- E (HEAD)
+Now, commit E represents the undoing of the changes in commit C.
+
+# Restore all files to the state in the last commit
+git restore --staged .classpath .factorypath .project vehicle-service.iml src/main/resources/application.yml
+
+Amend the Last Commit:
+git commit --amend
+
+View Differences Between Commits:
+git diff <commit1> <commit2>

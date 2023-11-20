@@ -4,15 +4,13 @@ git checkout -b feature_branch
 echo "Some changes" > myfile.txt
 git add myfile.txt
 git commit -m "Add changes on feature_branch"
-Switch to the main branch and make changes:
- 
+  
 2.Switch to the main branch and make changes:
 git checkout main
 echo "Some changes on main" > mainfile.txt
 git add mainfile.txt
 git commit -m "Add changes on main"
-Merge feature_branch into main:
-
+ 
 3.Merge feature_branch into main:
 git checkout main
 git merge feature_branch
